@@ -10,4 +10,4 @@ const checkLenght = (stringToCheck, maxLenght) => {
   stringToCheck = String(stringToCheck);
   return stringToCheck.length <= maxLenght ? 1 : 0;
 };
-checkLenght('sfff', 8); 
+checkLenght('sfff', 8);   
