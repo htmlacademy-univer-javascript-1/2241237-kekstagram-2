@@ -1,15 +1,13 @@
-function getRandomPositiveNumber(a, b) {
-  const min = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
-  const max = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
-  const result = Math.floor(Math.random() * (max - min + 1) + min);
-  return result;
-}
+const getRandomInteger = (from, to) => {
+  if(from < 0 || to < 0) {
+    return 0;
+  }
+  return Math.floor(Math.random() * (to - from)) + from; // взято с https://myrusakov.ru/js-random-numbers.html
+};
+getRandomInteger(4,10);
 
-
-getRandomPositiveNumber(2,10);
-
-function checkStringLength (string, length) {
-  return string.length <= length;
-}
-
-checkStringLength(30, 50);
+const checkLenght = (stringToCheck, maxLenght) => {
+  stringToCheck = String(stringToCheck);
+  return stringToCheck.length <= maxLenght ? 1 : 0;
+};
+checkLenght('sfff', 8);
