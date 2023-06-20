@@ -5,7 +5,7 @@ const comment = bigPicture.querySelector('.social__comments');
 const shownCommentsCountSection = document.querySelector('.comments-shown-count');
 
 let commentsDataCopy = [];
-let shownCommentsCount;
+let shownCommentsCount = 0;
 
 const closeBigPicture = (evt) => {
   if (evt.key === 'Escape' || evt.type === 'click' && evt.target.closest('.big-picture__cancel')) {
